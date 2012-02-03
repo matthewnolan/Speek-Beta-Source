@@ -1,0 +1,8 @@
+.hidden {
+	display: none;
+}
+
+#email {
+	visibility: hidden;
+	position:absolute;
+}

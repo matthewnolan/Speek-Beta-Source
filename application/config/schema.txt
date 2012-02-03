@@ -1,0 +1,35 @@
+-- ----------------------------
+-- Table structure for `conference`
+-- ----------------------------
+DROP TABLE IF EXISTS `conference`;
+CREATE TABLE `conference` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `call_id` bigint(20) DEFAULT NULL,
+  `call_status` varchar(64) DEFAULT NULL,
+  `slug` varchar(255) DEFAULT NULL,
+  `ip_address` varchar(255) DEFAULT NULL,
+  `gfc_id` varchar(255) DEFAULT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=281 DEFAULT CHARSET=latin1;
+
+
+-- ----------------------------
+-- Table structure for `history`
+-- ----------------------------
+DROP TABLE IF EXISTS `history`;
+CREATE TABLE `history` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `call_id` bigint(20) DEFAULT NULL,
+  `ip_address` varchar(255) DEFAULT NULL,
+  `full_name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `email_sent` smallint(1) DEFAULT NULL,
+  `method` varchar(255) DEFAULT NULL,
+  `method_identifier` varchar(255) DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=303 DEFAULT CHARSET=latin1;
