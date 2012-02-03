@@ -2,16 +2,7 @@
 
 class Conference_model extends CI_Model {
 	
-  public $id = '';
-  public $call_id = '';
-  public $gfc_id = '';
-  public $slug = '';
-  public $ip_address = '';
-  public $expires_at = '';
-  public $created_at = '';
-  public $updated_at = '';
-  public static $History = '';
-  public static $isNew = true;
+/* XXX missing code here. */
 
 
   public function __Construct()
@@ -213,14 +204,6 @@ class Conference_model extends CI_Model {
   }
   protected function populateThisObject($conference)
   {
-		$this->id = $conference['id'];
-		$this->call_id = $conference['call_id'];
-		$this->slug = $conference['slug'];
-		$this->ip_address = $conference['ip_address'];
-		$this->updated_at = $conference['updated_at'];
-		$this->created_at = $conference['created_at'];
-		$this->gfc_id = $conference['gfc_id'];
-		self::$History = $this->getHistory();
-		self::$isNew = false;
+	/* XXX missing code here. */
   }
 }

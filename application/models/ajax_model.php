@@ -116,69 +116,7 @@ class Ajax_model extends CI_Model {
         return $query->row();
     }
     
-    /**
-    * Gets slugs for current user
-    * @param   : string
-    * @return  : object
-    */
-    public function get_previous_slugs($gfc_id)
-    {
-        $query = $this->db->get_where('conference', array('gfc_id' => $gfc_id));      
-        return $query->result();
-    }
-    
-    /**
-    * Sets call status to fix race issue
-    * @param   : string
-    * @return  : boolean
-    */
-    public function set_call_status($slug, $status)
-    {
-        $data = array('call_status'=>$status);
-        $this->db->where('slug', $slug);
-        return ($this->db->update('conference', $data)? TRUE : FALSE);
-    }
-    
-    /**
-    * Deletes Slug
-    * @param   : string
-    * @return  : boolean
-    */
-    public function delete_slug($slug, $gfc_id)
-    {
-        return ($this->db->delete('conference', array('slug' => $slug, 'gfc_id' => $gfc_id)) ? TRUE : FALSE);
-    }
-    
-    /**
-     * Gets a list of the current callers
-     * @param   : number
-     * @return  : object
-     */
-    public function current_callers($call_id)
-    {
-        $query = $this->db->get_where('history', array('call_id'=>$call_id));
-        
-        return $query->result();
-    }
-    
-    /**
-     * Adds new caller entry to history table
-     * @param   : array
-     * @return  : boolean
-     */
-    public function add_caller($args = array())
-    {
-        $data['full_name']         = $args['full_name'];
-        $data['email']             = $args['email'];
-        $data['call_id']           = $args['call_id'];
-        $data['ip_address']        = $_SERVER['REMOTE_ADDR'];
-        $data['method']            = $args['method'];
-        $data['method_identifier'] = $args['method_identifier'];
-        $data['created_at']        = date('Y-m-d H:i:s');
-        $data['updated_at']        = date('Y-m-d H:i:s');
-        
-        return ($this->db->insert('history', $data) ? TRUE : FALSE);
-    }
+/* XXX missing a lot of code here */
 
 }
 /* End of file ajax_model.php */
