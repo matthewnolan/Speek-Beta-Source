@@ -1,1 +1,1 @@
-This is the core of Speek's conference calling product (code named Headstand). This is prepared for code example purposes only and is missing a few core functions. For a working version of the application see: beta.speek.com or contract me directly. 
+This is the core of Speek's conference calling product (code named Headstand). This is prepared for code example purposes only and is missing a few core functions. For a working version of the application see: beta.speek.com or contract directly. 

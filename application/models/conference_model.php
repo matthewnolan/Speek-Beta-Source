@@ -205,5 +205,6 @@ class Conference_model extends CI_Model {
   protected function populateThisObject($conference)
   {
 	/* XXX missing code here. */
+	
   }
 }

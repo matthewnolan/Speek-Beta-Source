@@ -118,5 +118,6 @@ class Ajax_model extends CI_Model {
     
 /* XXX missing a lot of code here */
 
+
 }
 /* End of file ajax_model.php */
